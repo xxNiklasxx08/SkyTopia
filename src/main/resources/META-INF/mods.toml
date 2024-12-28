@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[0,)"
+license="All Rights Reserved"
+
+[[mods]]
+    modId="skytopia"
+    version="1.0-0"
+    displayName="SkyTopia"
+    authors="_xxNiklasxx_08"
+    description='''SkyTopia'''
+
+[[dependencies.skytopia]]
+    modId="forge"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.skytopia]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21,1.22)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "skytopia:block/transmutation_block"
+    }
+  }
+}

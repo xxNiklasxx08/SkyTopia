@@ -1,0 +1,20 @@
+{
+    "item.skytopia.time_changer": "Time Changer",
+    "item.skytopia.chocolate": "Chocolate",
+    "item.skytopia.raw_gemstone": "Raw Gemstone",
+    "item.skytopia.polished_gemstone": "Polished Gemstone",
+    "item.skytopia.rivet": "Rivet",
+    "item.skytopia.gemstone_helmet": "Gemstone Helmet",
+    "item.skytopia.gemstone_chestplate": "Gemstone Chestplate",
+    "item.skytopia.gemstone_leggings": "Gemstone Leggings",
+    "item.skytopia.gemstone_boots": "Gemstone Boots",
+    "item.skytopia.lightning_wand": "Lightning Wand",
+    "item.skytopia.explosion_wand": "Explosion Wand",
+    "item.skytopia.hammer": "Hammer",
+    "block.skytopia.transmutation_block": "Transmutation Block",
+    "block.skytopia.iron_plate_block": "Iron Plates",
+    "block.skytopia.gemstone_ore": "Gemstone Ore",
+    "skytopia.tab.items": "SkyTopia Items",
+    "skytopia.tab.equipment": "SkyTopia Equipment",
+    "skytopia.tab.blocks": "SkyTopia Blocks"
+}

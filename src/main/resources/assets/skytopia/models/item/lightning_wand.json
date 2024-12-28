@@ -1,0 +1,75 @@
+{
+  "credit": "Created by _xxNiklasxx_08",
+  "parent": "builtin/entity",
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        -10.5,
+        0.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0.75,
+        -9.25,
+        0.5
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        1.75,
+        -5.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        2.75,
+        -5.25,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -6.5,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "translation": [
+        -6,
+        -8.5,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        -1.25,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -10,
+        0
+      ]
+    }
+  },
+  "textures": {
+    "particle": "skytopia:item/lightning_wand"
+  }
+}
