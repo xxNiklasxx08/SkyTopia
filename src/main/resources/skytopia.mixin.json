@@ -1,0 +1,9 @@
+{
+    "compatibilityLevel": "JAVA_21",
+    "package": "de._xxniklasxx_08.skytopia.mixin",
+    "refmap": "skytopia.refmap.json",
+    "minVersion": "0.8",
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

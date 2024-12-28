@@ -3,6 +3,7 @@ plugins {
     id("idea")
     id("net.minecraftforge.gradle") version("[6.0.24,6.2)")
     id("org.parchmentmc.librarian.forgegradle") version("1.+")
+    id("org.spongepowered.mixin") version("0.7.+")
 }
 
 group = "de._xxniklasxx_08"
@@ -21,6 +22,7 @@ dependencies {
         version { strictly("5.0.4") }
     }
     implementation(fg.deobf("software.bernie.geckolib:geckolib-forge-1.21:4.5.8"))
+    annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
 }
 
 minecraft {
@@ -44,6 +46,11 @@ minecraft {
             args("--mod", "skytopia", "--all", "--output", "${file("src/generated/resources/")}", "--existing", "${file("src/main/resources/")}")
         }
     }
+}
+
+mixin {
+    add(sourceSets.main.get(), "skytopia.refmap.json")
+    config("skytopia.mixin.json")
 }
 
 sourceSets {
