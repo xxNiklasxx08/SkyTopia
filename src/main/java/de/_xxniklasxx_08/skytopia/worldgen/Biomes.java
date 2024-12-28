@@ -1,7 +1,7 @@
 package de._xxniklasxx_08.skytopia.worldgen;
 
 import de._xxniklasxx_08.skytopia.SkyTopia;
-import de._xxniklasxx_08.skytopia.worldgen.biomes.CherryGroveBiome;
+import de._xxniklasxx_08.skytopia.worldgen.biomes.BambooGroveBiome;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -17,7 +17,8 @@ public class Biomes {
     public static void bootstrap(@NotNull BootstrapContext<Biome> context) {
         HolderGetter<PlacedFeature> placed = context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<ConfiguredWorldCarver<?>> carvers = context.lookup(Registries.CONFIGURED_CARVER);
-        context.register(registerKey("cherry_grove"), CherryGroveBiome.create(placed, carvers));
+
+        context.register(registerKey("bamboo_grove"), BambooGroveBiome.create(placed, carvers));
     }
 
     private static @NotNull ResourceKey<Biome> registerKey(String name) {

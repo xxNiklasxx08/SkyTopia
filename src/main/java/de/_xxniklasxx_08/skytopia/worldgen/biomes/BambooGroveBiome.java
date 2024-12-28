@@ -14,7 +14,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeSpecialEffectsBuilder;
 import org.jetbrains.annotations.NotNull;
 
-public class CherryGroveBiome {
+public class BambooGroveBiome {
 
     public static @NotNull Biome create(HolderGetter<PlacedFeature> placed, HolderGetter<ConfiguredWorldCarver<?>> carvers) {
         BiomeSpecialEffects effects = BiomeSpecialEffectsBuilder.create(12638463, 6141935, 6141935, 8103167)
