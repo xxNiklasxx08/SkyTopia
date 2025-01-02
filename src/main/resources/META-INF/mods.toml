@@ -22,3 +22,10 @@ license="All Rights Reserved"
     versionRange="[1.21,1.22)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.skytopia]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="*"
+    ordering="NONE"
+    side="BOTH"
