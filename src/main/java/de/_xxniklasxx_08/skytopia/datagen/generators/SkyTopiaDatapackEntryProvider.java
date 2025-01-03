@@ -1,6 +1,7 @@
 package de._xxniklasxx_08.skytopia.datagen.generators;
 
 import de._xxniklasxx_08.skytopia.SkyTopia;
+import de._xxniklasxx_08.skytopia.registry.EnchantmentRegistry;
 import de._xxniklasxx_08.skytopia.worldgen.BiomeModifiers;
 import de._xxniklasxx_08.skytopia.worldgen.Biomes;
 import de._xxniklasxx_08.skytopia.worldgen.ConfiguredFeatures;
@@ -21,7 +22,8 @@ public class SkyTopiaDatapackEntryProvider extends DatapackBuiltinEntriesProvide
         .add(Registries.CONFIGURED_FEATURE, ConfiguredFeatures::bootstrap)
         .add(Registries.PLACED_FEATURE, PlacedFeatures::bootstrap)
         .add(ForgeRegistries.Keys.BIOME_MODIFIERS, BiomeModifiers::bootstrap)
-        .add(Registries.BIOME, Biomes::bootstrap);
+        .add(Registries.BIOME, Biomes::bootstrap)
+        .add(Registries.ENCHANTMENT, EnchantmentRegistry::bootstrap);
 
     public SkyTopiaDatapackEntryProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(SkyTopia.MOD_ID));

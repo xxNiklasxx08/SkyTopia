@@ -2,6 +2,7 @@ package de._xxniklasxx_08.skytopia;
 
 import de._xxniklasxx_08.skytopia.registry.BlockRegistry;
 import de._xxniklasxx_08.skytopia.registry.CreativeModeRegistry;
+import de._xxniklasxx_08.skytopia.registry.EnchantmentEffectRegistry;
 import de._xxniklasxx_08.skytopia.registry.ItemRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,9 +16,12 @@ public class SkyTopia {
 
     public SkyTopia() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         ItemRegistry.register(eventBus);
         BlockRegistry.register(eventBus);
+        EnchantmentEffectRegistry.register(eventBus);
         CreativeModeRegistry.register(eventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
