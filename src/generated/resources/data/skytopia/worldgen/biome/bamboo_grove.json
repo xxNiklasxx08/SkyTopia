@@ -1,10 +1,6 @@
 {
   "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
+    "air": "minecraft:canyon"
   },
   "downfall": 0.8,
   "effects": {
@@ -34,7 +30,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "skytopia:gemstone_ore_placed"
+    ],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
@@ -45,6 +43,12 @@
       "minecraft:ore_granite_upper",
       "minecraft:ore_andesite_lower",
       "minecraft:ore_andesite_upper"
+    ],
+    [],
+    [
+      "skytopia:basic_cherry_tree_placed",
+      "skytopia:big_cherry_tree_placed",
+      "skytopia:bamboo_placed"
     ]
   ],
   "has_precipitation": true,

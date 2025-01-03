@@ -26,7 +26,7 @@ dependencies {
 }
 
 minecraft {
-    mappings("parchment", "2024.07.28-1.21")
+    mappings("parchment", "2024.11.17-1.21.1")
     reobf = false
     copyIdeResources = true
     runs {

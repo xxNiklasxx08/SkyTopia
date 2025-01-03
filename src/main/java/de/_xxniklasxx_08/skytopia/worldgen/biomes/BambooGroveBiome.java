@@ -1,5 +1,6 @@
 package de._xxniklasxx_08.skytopia.worldgen.biomes;
 
+import de._xxniklasxx_08.skytopia.worldgen.PlacedFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.data.worldgen.Carvers;
 import net.minecraft.data.worldgen.placement.OrePlacements;
@@ -28,15 +29,16 @@ public class BambooGroveBiome {
             .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PIG, 1, 8, 8))
             .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 2, 2, 6))
             .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 2, 4))
+
             .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.HUSK, 95, 4, 4))
             .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.STRAY, 100, 4, 4))
+
             .addSpawn(MobCategory.UNDERGROUND_WATER_CREATURE, new MobSpawnSettings.SpawnerData(EntityType.GLOW_SQUID, 10, 4, 6))
             .build();
 
         BiomeGenerationSettings settings = new BiomeGenerationSettings.Builder(placed, carvers)
-            .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE)
-            .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE_EXTRA_UNDERGROUND)
             .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON)
+
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_DIRT)
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRAVEL)
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_TUFF)
@@ -46,6 +48,12 @@ public class BambooGroveBiome {
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRANITE_UPPER)
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_ANDESITE_LOWER)
             .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_ANDESITE_UPPER)
+
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, PlacedFeatures.GEMSTONE_ORE_PLACED)
+
+            .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.BASIC_CHERRY_TREE_PLACED)
+            .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.BIG_CHERRY_TREE_PLACED)
+            .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.BAMBOO_PLACED)
             .build();
 
         return new Biome.BiomeBuilder()
