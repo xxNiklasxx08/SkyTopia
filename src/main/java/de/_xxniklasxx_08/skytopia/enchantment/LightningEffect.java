@@ -15,8 +15,8 @@ public class LightningEffect implements EnchantmentEntityEffect {
     public static final MapCodec<LightningEffect> CODEC = MapCodec.unit(LightningEffect::new);
 
     @Override
-    public void apply(@NotNull ServerLevel world, int level, @NotNull EnchantedItemInUse item, @NotNull Entity entity, @NotNull Vec3 origin) {
-        EntityType.LIGHTNING_BOLT.spawn(world, entity.getOnPos(), MobSpawnType.TRIGGERED);
+    public void apply(@NotNull ServerLevel level, int enchantmentLevel, @NotNull EnchantedItemInUse item, @NotNull Entity entity, @NotNull Vec3 origin) {
+        EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
     }
 
     @Override
