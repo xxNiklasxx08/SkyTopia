@@ -13,12 +13,13 @@
     "item.skytopia.hammer": "Hammer",
 
     "block.skytopia.transmutation_block": "Transmutation Block",
-    "block.skytopia.iron_plate_block": "Iron Plates",
     "block.skytopia.gemstone_ore": "Gemstone Ore",
 
     "enchantment.skytopia.lightning_striker": "Lightning Striker",
 
     "skytopia.tab.items": "SkyTopia Items",
     "skytopia.tab.equipment": "SkyTopia Equipment",
-    "skytopia.tab.blocks": "SkyTopia Blocks"
+    "skytopia.tab.blocks": "SkyTopia Blocks",
+
+    "message.enchanting_table.disabled": "Dieses Feature ist deaktiviert!"
 }

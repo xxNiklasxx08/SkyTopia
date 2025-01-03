@@ -2,7 +2,6 @@ package de._xxniklasxx_08.skytopia.registry;
 
 import de._xxniklasxx_08.skytopia.SkyTopia;
 import de._xxniklasxx_08.skytopia.block.GemstoneOreBlock;
-import de._xxniklasxx_08.skytopia.block.IronPlateBlock;
 import de._xxniklasxx_08.skytopia.block.TransmutationBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,7 +18,6 @@ public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SkyTopia.MOD_ID);
 
     public static final RegistryObject<Block> TRANSMUTATION_BLOCK = registerBlock("transmutation_block", TransmutationBlock::new);
-    public static final RegistryObject<Block> IRON_PLATE_BLOCK = registerBlock("iron_plate_block", IronPlateBlock::new);
     public static final RegistryObject<Block> GEMSTONE_ORE = registerBlock("gemstone_ore", GemstoneOreBlock::new);
 
     public static void register(IEventBus eventBus) {

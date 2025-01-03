@@ -19,7 +19,6 @@ public class SkyTopiaLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(BlockRegistry.TRANSMUTATION_BLOCK.get());
-        dropSelf(BlockRegistry.IRON_PLATE_BLOCK.get());
 
         dropWhenSilkTouch(BlockRegistry.GEMSTONE_ORE.get());
     }

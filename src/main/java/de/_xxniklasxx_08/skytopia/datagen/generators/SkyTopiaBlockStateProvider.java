@@ -18,7 +18,6 @@ public class SkyTopiaBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(BlockRegistry.TRANSMUTATION_BLOCK);
-        blockWithItem(BlockRegistry.IRON_PLATE_BLOCK);
         blockWithItem(BlockRegistry.GEMSTONE_ORE);
     }
 

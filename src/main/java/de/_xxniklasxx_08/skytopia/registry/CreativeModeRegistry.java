@@ -28,7 +28,6 @@ public class CreativeModeRegistry {
         .displayItems(((parameters, output) -> {
 
             output.accept(BlockRegistry.TRANSMUTATION_BLOCK.get());
-            output.accept(BlockRegistry.IRON_PLATE_BLOCK.get());
             output.accept(BlockRegistry.GEMSTONE_ORE.get());
 
         })).build());
