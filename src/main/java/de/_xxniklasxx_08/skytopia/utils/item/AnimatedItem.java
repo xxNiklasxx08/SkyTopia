@@ -23,12 +23,15 @@ public class AnimatedItem extends Item implements GeoItem {
     @Override
     public void initializeClient(@NotNull Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
+
             private AnimatedItemRenderer<AnimatedItem> renderer;
+
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                 if(this.renderer == null) this.renderer = new AnimatedItemRenderer<>();
                 return this.renderer;
             }
+
         });
     }
 

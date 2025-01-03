@@ -22,10 +22,10 @@ public class SkyTopiaItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(@NotNull HolderLookup.Provider provider) {
         tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ItemRegistry.GEMSTONE_HELMET.get())
-                .add(ItemRegistry.GEMSTONE_CHESTPLATE.get())
-                .add(ItemRegistry.GEMSTONE_LEGGINGS.get())
-                .add(ItemRegistry.GEMSTONE_BOOTS.get());
+            .add(ItemRegistry.GEMSTONE_HELMET.get())
+            .add(ItemRegistry.GEMSTONE_CHESTPLATE.get())
+            .add(ItemRegistry.GEMSTONE_LEGGINGS.get())
+            .add(ItemRegistry.GEMSTONE_BOOTS.get());
     }
 
 }

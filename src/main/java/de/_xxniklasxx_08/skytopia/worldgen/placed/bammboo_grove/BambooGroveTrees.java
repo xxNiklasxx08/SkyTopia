@@ -15,12 +15,14 @@ public class BambooGroveTrees {
 
     public static @NotNull List<PlacementModifier> placed() {
         List<PlacementModifier> placements = new ArrayList<>();
+
         placements.add(CountPlacement.of(BiasedToBottomInt.of(3, 9)));
         placements.add(new InSquarePlacement());
         // TODO: surface_water_depth_filter
         placements.add(HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE));
         placements.add(BiomeFilter.biome());
         placements.add(BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(Blocks.CHERRY_SAPLING.defaultBlockState(), Vec3i.ZERO)));
+
         return placements;
     }
 

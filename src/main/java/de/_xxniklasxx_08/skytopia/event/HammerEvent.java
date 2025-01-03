@@ -24,10 +24,13 @@ public class HammerEvent {
     public static void onHammerUsage(@NotNull BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
         ItemStack item = player.getMainHandItem();
+
         if(!(item.getItem() instanceof HammerItem hammer)) return;
         if(!(player instanceof ServerPlayer server)) return;
+
         BlockPos position = event.getPos();
         if(MINED.contains(position)) return;
+
         for(BlockPos pos : MathUtils.getBlocksToDestroy(1, position, server)) {
             if(pos == position || !(hammer.isCorrectToolForDrops(item, event.getLevel().getBlockState(pos)))) continue;
             MINED.add(pos);

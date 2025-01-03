@@ -44,6 +44,7 @@ public class SkyTopiaItemModelProvider extends ItemModelProvider {
         basicItem(ItemRegistry.POLISHED_GEMSTONE.get());
         basicItem(ItemRegistry.RIVET.get());
         basicItem(ItemRegistry.HAMMER.get());
+
         trimmedArmorItem(ItemRegistry.GEMSTONE_HELMET);
         trimmedArmorItem(ItemRegistry.GEMSTONE_CHESTPLATE);
         trimmedArmorItem(ItemRegistry.GEMSTONE_LEGGINGS);
@@ -52,6 +53,7 @@ public class SkyTopiaItemModelProvider extends ItemModelProvider {
 
     private void trimmedArmorItem(@NotNull RegistryObject<Item> item) {
         if(!(item.get() instanceof ArmorItem armor)) return;
+
         trims.forEach((material, value) -> {
             String type = switch(armor.getEquipmentSlot()) {
                 case HEAD -> "helmet";
@@ -60,16 +62,21 @@ public class SkyTopiaItemModelProvider extends ItemModelProvider {
                 case FEET -> "boots";
                 default -> "";
             };
+
             String itemPath = armor.toString();
             String trimPath = "trims/items/" + type + "_trim_" + material.location().getPath();
             String currentTrim = itemPath + "_" + material.location().getPath() + "_trim";
+
             ResourceLocation itemLocation = ResourceLocation.parse(itemPath);
             ResourceLocation trimLocation = ResourceLocation.parse(trimPath);
             ResourceLocation currentLocation = ResourceLocation.parse(currentTrim);
+
             existingFileHelper.trackGenerated(trimLocation, PackType.CLIENT_RESOURCES, ".png", "textures");
+
             getBuilder(currentTrim).parent(new ModelFile.UncheckedModelFile("item/generated"))
                     .texture("layer0", itemLocation.getNamespace() + ":item/" + itemLocation.getPath())
                     .texture("layer1", trimLocation);
+
             this.withExistingParent(item.getId().getPath(), mcLoc("item/generated")).override()
                     .model(new ModelFile.UncheckedModelFile(currentLocation.getNamespace() + ":item/" + currentLocation.getPath()))
                     .predicate(mcLoc("trim_type"), value).end()

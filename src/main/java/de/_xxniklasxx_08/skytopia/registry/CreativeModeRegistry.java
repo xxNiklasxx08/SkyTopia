@@ -16,22 +16,27 @@ public class CreativeModeRegistry {
     public static final RegistryObject<CreativeModeTab> ITEMS = TABS.register("skytopia_items", () -> CreativeModeTab.builder()
         .icon(() -> new ItemStack(ItemRegistry.RAW_GEMSTONE.get())).title(Component.translatable("skytopia.tab.items"))
         .displayItems((parameters, output) -> {
+
             output.accept(ItemRegistry.CHOCOLATE.get());
             output.accept(ItemRegistry.RAW_GEMSTONE.get());
             output.accept(ItemRegistry.RIVET.get());
+
         }).build());
 
     public static final RegistryObject<CreativeModeTab> BLOCKS = TABS.register("skytopia_blocks", () -> CreativeModeTab.builder()
         .icon(() -> new ItemStack(BlockRegistry.TRANSMUTATION_BLOCK.get())).title(Component.translatable("skytopia.tab.blocks"))
         .displayItems(((parameters, output) -> {
+
             output.accept(BlockRegistry.TRANSMUTATION_BLOCK.get());
             output.accept(BlockRegistry.IRON_PLATE_BLOCK.get());
             output.accept(BlockRegistry.GEMSTONE_ORE.get());
+
         })).build());
 
     public static final RegistryObject<CreativeModeTab> EQUIPMENT = TABS.register("skytopia_equipment", () -> CreativeModeTab.builder()
         .icon(() -> new ItemStack(ItemRegistry.GEMSTONE_CHESTPLATE.get())).title(Component.translatable("skytopia.tab.equipment"))
         .displayItems((parameters, output) -> {
+
             output.accept(ItemRegistry.TIME_CHANGER.get());
             output.accept(ItemRegistry.LIGHTNING_WAND.get());
             output.accept(ItemRegistry.EXPLOSION_WAND.get());
@@ -40,6 +45,7 @@ public class CreativeModeRegistry {
             output.accept(ItemRegistry.GEMSTONE_CHESTPLATE.get());
             output.accept(ItemRegistry.GEMSTONE_LEGGINGS.get());
             output.accept(ItemRegistry.GEMSTONE_BOOTS.get());
+
         }).build());
 
     public static void register(IEventBus eventBus) {

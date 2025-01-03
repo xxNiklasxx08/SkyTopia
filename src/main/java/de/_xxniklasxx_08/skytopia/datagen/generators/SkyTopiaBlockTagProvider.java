@@ -24,6 +24,7 @@ public class SkyTopiaBlockTagProvider extends BlockTagsProvider {
             .add(BlockRegistry.TRANSMUTATION_BLOCK.get())
             .add(BlockRegistry.IRON_PLATE_BLOCK.get())
             .add(BlockRegistry.GEMSTONE_ORE.get());
+
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
             .add(BlockRegistry.TRANSMUTATION_BLOCK.get())
             .add(BlockRegistry.GEMSTONE_ORE.get());

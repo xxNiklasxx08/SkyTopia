@@ -32,7 +32,9 @@ public class TransmutationBlock extends Block {
     @Override
     public void stepOn(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Entity entity) {
         if(level.isClientSide()) return;
+
         if(entity instanceof Player player) player.hurt(level.damageSources().magic(), 10F);
+
         else if(entity instanceof ItemEntity item) {
             if(item.getItem().getItem() != ItemRegistry.RAW_GEMSTONE.get()) return;
             item.setItem(new ItemStack(Items.DIAMOND, item.getItem().getCount()));
